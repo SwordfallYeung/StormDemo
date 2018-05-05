@@ -63,6 +63,7 @@ public class MySpout extends BaseRichSpout{
 	public void fail(Object msgId) {
 		System.out.println("消息处理失败，id= " + msgId);
 		Values tuple = buffer.get(msgId);
+		//消息重发
 		collector.emit(tuple, msgId);
 	}
 }
