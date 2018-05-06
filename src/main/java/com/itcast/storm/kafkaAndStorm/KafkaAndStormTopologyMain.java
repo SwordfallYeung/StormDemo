@@ -27,6 +27,7 @@ public class KafkaAndStormTopologyMain {
 						"kafkaSpout"
 				)),1);
 		topologyBuilder.setBolt("mybolt1", new ParserOrderMqBolt(),1).shuffleGrouping("kafkaSpout");
+		//topologyBuilder.setBolt("mybolt1", new MyBolt1(),1).shuffleGrouping("kafkaSpout");
 
 		Config config = new Config();
 		config.setNumWorkers(1);
