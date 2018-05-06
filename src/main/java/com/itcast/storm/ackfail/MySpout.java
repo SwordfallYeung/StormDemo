@@ -1,11 +1,18 @@
 package com.itcast.storm.ackfail;
 
-import backtype.storm.spout.SpoutOutputCollector;
+/*import backtype.storm.spout.SpoutOutputCollector;
 import backtype.storm.task.TopologyContext;
 import backtype.storm.topology.OutputFieldsDeclarer;
 import backtype.storm.topology.base.BaseRichSpout;
 import backtype.storm.tuple.Fields;
-import backtype.storm.tuple.Values;
+import backtype.storm.tuple.Values;*/
+
+import org.apache.storm.spout.SpoutOutputCollector;
+import org.apache.storm.task.TopologyContext;
+import org.apache.storm.topology.OutputFieldsDeclarer;
+import org.apache.storm.topology.base.BaseRichSpout;
+import org.apache.storm.tuple.Fields;
+import org.apache.storm.tuple.Values;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,7 +24,7 @@ import java.util.UUID;
  * @create 2018-05-05 23:11
  * @desc ack/fail机制保证数据不丢失
  **/
-public class MySpout extends BaseRichSpout{
+public class MySpout extends BaseRichSpout {
 	private SpoutOutputCollector collector;
 	private Random random;
 	private Map<String,Values> buffer = new HashMap<>();

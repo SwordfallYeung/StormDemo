@@ -1,19 +1,17 @@
 package com.itcast.storm.wordcount;
 
-import backtype.storm.Config;
+/*import backtype.storm.Config;
 import backtype.storm.LocalCluster;
 import backtype.storm.topology.TopologyBuilder;
-import backtype.storm.tuple.Fields;
+import backtype.storm.tuple.Fields;*/
 import com.itcast.storm.wordcount.MyCountBolt;
 import com.itcast.storm.wordcount.MySplitBolt;
 import com.itcast.storm.wordcount.MySpout;
-/*
 import org.apache.storm.Config;
 import org.apache.storm.LocalCluster;
 import org.apache.storm.StormSubmitter;
 import org.apache.storm.topology.TopologyBuilder;
 import org.apache.storm.tuple.Fields;
-*/
 
 /**
  * @author y15079

@@ -1,18 +1,25 @@
 package com.itcast.storm.stream.bolt;
 
-import backtype.storm.topology.BasicOutputCollector;
+/*import backtype.storm.topology.BasicOutputCollector;
 import backtype.storm.topology.OutputFieldsDeclarer;
 import backtype.storm.topology.base.BaseBasicBolt;
 import backtype.storm.tuple.Fields;
 import backtype.storm.tuple.Tuple;
-import backtype.storm.tuple.Values;
+import backtype.storm.tuple.Values;*/
+
+import org.apache.storm.topology.BasicOutputCollector;
+import org.apache.storm.topology.OutputFieldsDeclarer;
+import org.apache.storm.topology.base.BaseBasicBolt;
+import org.apache.storm.tuple.Fields;
+import org.apache.storm.tuple.Tuple;
+import org.apache.storm.tuple.Values;
 
 /**
  * @author y15079
  * @create 2018-05-06 0:05
  * @desc
  **/
-public class SplitBolt extends BaseBasicBolt{
+public class SplitBolt extends BaseBasicBolt {
 	@Override
 	public void execute(Tuple input, BasicOutputCollector collector) {
 		String message = input.getString(0);
